@@ -174,7 +174,7 @@ namespace Acme.Biz.Tests
 
             //Act
             var actual = currentProduct.Category;
-    
+
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -243,5 +243,20 @@ namespace Acme.Biz.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod()]
+        public void CalculatesuggestedPriceTest()
+        {
+            //Arrange 
+            var currentProduct = new Product(1, "Saw", "");
+            currentProduct.Cost = 50m;
+            var expected = 55m;
+
+            //Act
+            var actual = currentProduct.CalculatesuggestedPrice(10m);
+
+            //Assert
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

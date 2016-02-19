@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Acme.Biz;
+using Acme.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,64 @@ namespace Acme.Biz.Tests
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void PlaceOrderTest()
+        {
+            //Arrange
+            var vendor = new Vendor();
+            var product = new Product(1, "Saw", "");
+            var expected = new OperationResult(true, "Order from Acme, Inc\r\nProduct: Tools-1\r\nQuantity: 12");
+            //Act
+            var actual = vendor.PlaceOrder(product, 12);
+            //Assert
+            Assert.AreEqual(expected.Success, actual.Success);
+            Assert.AreEqual(expected.Message, actual.Message);
+        }
+
+        [TestMethod()]
+        public void PlaceOrderTest_3Params()
+        {
+            //Arrange
+            var vendor = new Vendor();
+            var product = new Product(1, "Saw", "");
+            var expected = new OperationResult(true, "Order from Acme, Inc\r\nProduct: Tools-1\r\nQuantity: 12"+
+                                                "\r\nDeliver By: 12/25/2016");
+            //Act
+            var actual = vendor.PlaceOrder(product, 12, new DateTimeOffset(2016, 12, 25, 0, 0, 0, new TimeSpan(-7, 0, 0)));
+            //Assert
+            Assert.AreEqual(expected.Success, actual.Success);
+            Assert.AreEqual(expected.Message, actual.Message);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void PlaceOrder_NullProduct_Exception()
+        {
+            //Arrange
+            var vendor = new Vendor();
+    
+            //Act
+            var actual = vendor.PlaceOrder(null, 12);
+
+            //Assert
+            //Exception thrown 
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void PlaceOrder_NullQuantity_Exception()
+        {
+            //Arrange
+            var vendor = new Vendor();
+
+            //Act
+           
+            var actual = vendor.PlaceOrder(new Product(), 0);
+
+            //Assert
+            //Exception thrown 
         }
     }
 }
