@@ -23,6 +23,7 @@ namespace Acme.Biz
         {
             //this.ProductVendor = new Vendor();
             this.MinimumPrice = .96m;
+            this.Category = "Tools";
             Console.WriteLine("Product was created");
         }
 
@@ -47,8 +48,26 @@ namespace Acme.Biz
 
         public string ProductName
         {
-            get { return productName; }
-            set { productName = value; }
+            get {
+                var formattedValue = productName?.Trim();
+                return formattedValue;
+            }
+            set {
+
+                if (value.Length < 3)
+                {
+                    ValidationMessage = "Product name must be at least 3 characters";
+                }
+                else if (value.Length > 20)
+                {
+                    ValidationMessage = "Product cannot be more than 20 characters";
+                }
+                else
+                {
+                    productName = value;
+                }
+
+            }
         }
 
 
@@ -82,6 +101,9 @@ namespace Acme.Biz
             set { productVendor = value; }
         }
 
+        public string Category { get; set; }
+        public int SequenceNumber { get; set; } = 1;
+
         private DateTime? availabilityDate;
 
         public DateTime? AvailabilityDate
@@ -89,6 +111,8 @@ namespace Acme.Biz
             get { return availabilityDate; }
             set { availabilityDate = value; }
         }
+
+        public string ValidationMessage { get; private set; }
 
 
 
