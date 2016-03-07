@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DinerMax3000Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IDinerMax3000Service_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DinerMax3000ServiceWebRole" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDinerMax3000Service_addNewCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_addNewCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_deleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_deleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_modifyCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_modifyCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_getCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_getCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_BypassCertError_InputMessage">
+    <wsdl:part name="parameters" element="tns:BypassCertError" />
+  </wsdl:message>
+  <wsdl:message name="IDinerMax3000Service_BypassCertError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BypassCertErrorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDinerMax3000Service">
+    <wsdl:operation name="addNewCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDinerMax3000Service/addNewCustomer" message="tns:IDinerMax3000Service_addNewCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDinerMax3000Service/addNewCustomerResponse" message="tns:IDinerMax3000Service_addNewCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDinerMax3000Service/deleteCustomer" message="tns:IDinerMax3000Service_deleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDinerMax3000Service/deleteCustomerResponse" message="tns:IDinerMax3000Service_deleteCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDinerMax3000Service/modifyCustomer" message="tns:IDinerMax3000Service_modifyCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDinerMax3000Service/modifyCustomerResponse" message="tns:IDinerMax3000Service_modifyCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDinerMax3000Service/getCustomers" message="tns:IDinerMax3000Service_getCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDinerMax3000Service/getCustomersResponse" message="tns:IDinerMax3000Service_getCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BypassCertError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDinerMax3000Service/BypassCertError" message="tns:IDinerMax3000Service_BypassCertError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDinerMax3000Service/BypassCertErrorResponse" message="tns:IDinerMax3000Service_BypassCertError_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDinerMax3000Service" type="tns:IDinerMax3000Service">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IDinerMax3000Service_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addNewCustomer">
+      <soap:operation soapAction="http://tempuri.org/IDinerMax3000Service/addNewCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCustomer">
+      <soap:operation soapAction="http://tempuri.org/IDinerMax3000Service/deleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyCustomer">
+      <soap:operation soapAction="http://tempuri.org/IDinerMax3000Service/modifyCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <soap:operation soapAction="http://tempuri.org/IDinerMax3000Service/getCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BypassCertError">
+      <soap:operation soapAction="http://tempuri.org/IDinerMax3000Service/BypassCertError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DinerMax3000Service">
+    <wsdl:port name="BasicHttpBinding_IDinerMax3000Service" binding="tns:BasicHttpBinding_IDinerMax3000Service">
+      <soap:address location="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

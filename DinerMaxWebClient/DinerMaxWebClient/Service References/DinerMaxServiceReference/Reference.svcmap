@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="796d86ae-9c14-49b8-86a1-845168af689d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DinerMax3000Service1.disco" MetadataType="Disco" ID="c96a8be0-4c40-443f-a500-8b37faceb9c5" SourceId="1" SourceUrl="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?disco" />
+    <MetadataFile FileName="DinerMax3000Service3.xsd" MetadataType="Schema" ID="a668873a-60ca-4e69-9e36-b8db7331c7c2" SourceId="1" SourceUrl="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="DinerMax3000Service1.wsdl" MetadataType="Wsdl" ID="28491995-9d5b-475d-b822-c7869bcea73c" SourceId="1" SourceUrl="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?wsdl" />
+    <MetadataFile FileName="DinerMax3000Service31.xsd" MetadataType="Schema" ID="471252cd-b952-446c-bd6a-2f77086ca02b" SourceId="1" SourceUrl="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="DinerMax3000Service32.xsd" MetadataType="Schema" ID="4346b0ff-c8bc-42fe-8d7b-077b2e7cad0e" SourceId="1" SourceUrl="https://dinermaxservice.cloudapp.net/DinerMax3000Service.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

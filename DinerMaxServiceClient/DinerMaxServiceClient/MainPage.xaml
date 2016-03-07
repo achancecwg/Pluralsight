@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="DinerMaxServiceClientApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DinerMaxServiceClientApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="GridViewCustomersDataTemplate">
+            <Grid Width="300" Background="#FF5D5AA0" Height="102">
+                <StackPanel Margin="10,22,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Surname:" VerticalAlignment="Top"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding Surname}" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="10,76,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Regular Customer:" VerticalAlignment="Top"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding IsRegularCustomer}" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="10,4,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding Name}" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="10,40,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding Age}" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="10,58,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="City:" VerticalAlignment="Top"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding City}" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView x:Name="GridViewCustomers" Margin="400,80,0,30" SelectionChanged="GridViewCustomers_SelectionChanged" ItemTemplate="{StaticResource GridViewCustomersDataTemplate}"/>
+        <StackPanel Margin="100,80,0,0" Width="295" HorizontalAlignment="Left">
+            <TextBlock TextWrapping="Wrap" Text="Name:" FontFamily="Segoe UI" FontSize="15" FontWeight="Light" Margin="0,0,0,5"/>
+            <TextBox x:Name="TextBoxName" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            <TextBlock TextWrapping="Wrap" Text="Surname:" FontFamily="Segoe UI" FontSize="15" FontWeight="Light" Margin="0,0,0,5"/>
+            <TextBox x:Name="TextBoxSurname" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            <TextBlock TextWrapping="Wrap" Text="City:" FontFamily="Segoe UI" FontSize="15" FontWeight="Light" Margin="0,0,0,5"/>
+            <TextBox x:Name="TextBoxCity" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            <Grid Margin="0,0,0,10">
+                <TextBlock TextWrapping="Wrap" Text="Age:" FontFamily="Segoe UI" FontSize="15" FontWeight="Light" Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="TextBoxAge" TextWrapping="Wrap" Margin="34,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <CheckBox x:Name="CheckBoxRegularCustomer" Content="Regular Customer" HorizontalAlignment="Left" Margin="140,2,0,0" VerticalAlignment="Top" FontWeight="Light"/>
+            </Grid>
+            <Button x:Name="ButtonAdd" Content="Add New Customer" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,0,0,10" Width="211" Click="ButtonAdd_Click"/>
+            <Button x:Name="ButtonDelete" Content="Delete Selected Customer" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,0,0,10" Width="211" Click="ButtonDelete_Click"/>
+            <Button x:Name="ButtonModify" Content="Modify Selected Customer" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,0,0,10" Click="ButtonModify_Click"/>
+        </StackPanel>
+        <ProgressBar x:Name="ProgressBar" VerticalAlignment="Top" Visibility="Collapsed"/>
+    </Grid>
+</Page>
