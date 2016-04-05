@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DinerMax3000MasterPage.master.cs" Inherits="DinerMax3000MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="Navigation" >
+            <a href="Default.aspx">Home</a>
+            <a href="Menus.aspx">Menus</a>
+        </div>
+    <div>
+        <asp:ContentPlaceHolder id="cphMainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

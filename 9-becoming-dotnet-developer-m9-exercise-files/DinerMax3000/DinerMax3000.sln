@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22013.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000Console", "DinerMax3000Console\DinerMax3000Console.csproj", "{710BA7D5-0060-43DD-B969-30EE27E94305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000BusinessLayer", "DinerMax3000BusinessLayer\DinerMax3000BusinessLayer.csproj", "{5C16188A-FC5E-48A7-9FC1-3F1B3D1E9CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000WPFClient", "DinerMax3000WPFClient\DinerMax3000WPFClient.csproj", "{E70B3359-DD80-4E6F-AAB6-3893CD825351}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DinerMax3000Web(1)", "http://localhost:2360", "{CA515756-D81C-41F2-A3F2-C3D77AA397AF}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{5c16188a-fc5e-48a7-9fc1-3f1b3d1e9cd6}|DinerMax3000BusinessLayer.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_2360"
+		Debug.AspNetCompiler.PhysicalPath = "DinerMax3000Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2360\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_2360"
+		Release.AspNetCompiler.PhysicalPath = "DinerMax3000Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2360\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "DinerMax3000Web\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000Services", "DinerMax3000Services\DinerMax3000Services.csproj", "{FC02B1B7-356C-480F-B113-04CC57EE8D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000UnitTests", "DinerMax3000UnitTests\DinerMax3000UnitTests.csproj", "{4ACBE102-8B9D-4B95-8204-193C4C581123}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{710BA7D5-0060-43DD-B969-30EE27E94305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710BA7D5-0060-43DD-B969-30EE27E94305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710BA7D5-0060-43DD-B969-30EE27E94305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710BA7D5-0060-43DD-B969-30EE27E94305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C16188A-FC5E-48A7-9FC1-3F1B3D1E9CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C16188A-FC5E-48A7-9FC1-3F1B3D1E9CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C16188A-FC5E-48A7-9FC1-3F1B3D1E9CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C16188A-FC5E-48A7-9FC1-3F1B3D1E9CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E70B3359-DD80-4E6F-AAB6-3893CD825351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E70B3359-DD80-4E6F-AAB6-3893CD825351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E70B3359-DD80-4E6F-AAB6-3893CD825351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E70B3359-DD80-4E6F-AAB6-3893CD825351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA515756-D81C-41F2-A3F2-C3D77AA397AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA515756-D81C-41F2-A3F2-C3D77AA397AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA515756-D81C-41F2-A3F2-C3D77AA397AF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA515756-D81C-41F2-A3F2-C3D77AA397AF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FC02B1B7-356C-480F-B113-04CC57EE8D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC02B1B7-356C-480F-B113-04CC57EE8D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC02B1B7-356C-480F-B113-04CC57EE8D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC02B1B7-356C-480F-B113-04CC57EE8D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ACBE102-8B9D-4B95-8204-193C4C581123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ACBE102-8B9D-4B95-8204-193C4C581123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ACBE102-8B9D-4B95-8204-193C4C581123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ACBE102-8B9D-4B95-8204-193C4C581123}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
