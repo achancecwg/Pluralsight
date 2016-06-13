@@ -1,5 +1,6 @@
-System.register(['./vehicle.component', './vehicle.service', './vehicle-list.component', './vehicles.component'], function(exports_1) {
+System.register(['./vehicle.component', './vehicle.service', './vehicle-list.component', './vehicles.component'], function(exports_1, context_1) {
     "use strict";
+    var __moduleName = context_1 && context_1.id;
     function exportStar_1(m) {
         var exports = {};
         for(var n in m) {

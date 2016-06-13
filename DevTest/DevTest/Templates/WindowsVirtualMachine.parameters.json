@@ -1,0 +1,32 @@
+﻿{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "dnsNameForPublicIP": {
+        "value": "SQL-DEVTEST-AAC"
+      },
+        "existingVirtualNetworkName": {
+            "value": "DevTestVNet"
+        },
+        "existingVirtualNetworkResourceGroup": {
+            "value": "DevTest"
+        },
+        "subnetName": {
+            "value": "DevTestFront"
+        },
+
+      "osDiskVhdUri": {
+        "value": "https://devtest4960.blob.core.windows.net/vhds/fileStreamDemo-disk-1-201656104243.vhd"
+      },
+        "vmName": {
+          "value": "SQL-DEVTEST-AAC"
+        },
+
+        "osType": {
+            "value": "Windows"
+        },
+        "vmSize": {
+            "value": "Standard_DS2"
+        }
+    }
+}
